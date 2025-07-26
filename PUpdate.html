@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Patient</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <form name="UpdatePatientForm" method="post" action="PUpdate.php">
+        <div>
+            <h1>Update Patient Form</h1>
+             Patient Id:<input type="number" id="Id" name="Id" > <br>
+            Name: <input type="text" name="Name" required><br>
+            Address: <textarea name="Address" required></textarea><br>
+            Contact: <input type="number" name="Contact" required><br>
+            Gender:
+            <input type="radio" name="Gender" value="Male" >Male
+            <input type="radio" name="Gender" value="Female">Female <br>
+            <button type="submit" >Update</button>
+        </form>
+        <br><br>
+<button onclick="window.location.href='Patient.html'">Back TO Home Page</button>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+	
+</head>
+<body>
+<form method="post" action="contact.php" Name="ContactForm" onsubmit="return validateForm()">
+	<h1>Contact Form</h1>
+	Name: *<input type="text" name="name" required> <BR>
+	E-mail: <input type="text" name="email" required> <br>
+	
+	Comment: <textarea name="comment" rows="5" cols="50" name="comment"></textarea> <br>
+	Gender : <input type="radio" name="gender" value="F"> Female
+		 <input type="radio" name="gender" value="M"> Male
+		<input type="radio" name="gender" value="O"> other <br>
+	<input type="submit" value="send" name="Submit">
+		
+
+
+<button type='button' onclick="Fetchdata()">Show Data</button>
+
+		<div id="result"> </div>
+
+	</form>
+	<button onclick="window.location.href='Delete1.html'">Delete</button>
+	<button onclick="window.location.href='Update.html'">Update</button>
+<script>
+	function validateForm(){
+		var name= document.forms['ContactForm']['name'].value;
+		
+			if(name.trim()===""){
+			alert("Name must be filled out");
+	
+			return false;	
+			}
+		
+		return true;
+	}
+	function Fetchdata(){
+		var r=new XMLHttpRequest();
+		r.open('GET',"Fetch_data.php",true);
+		r.onreadystatechange=function(){
+			if(r.readyState==4 && r.status==200){
+				document.getElementById("result").innerHTML=r.responseText;
+			}
+		};
+		r.send();
+	}
+
+	
+</script>
+
+</body></html>

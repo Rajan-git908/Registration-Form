@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <div>
+        <h1>Patient Form</h1>
+        <form name="PatientForm" method="post" action="Patient.php">
+            Patient ID: <input type="text" Name="Id" placeholder="This is Read Only." readonly><br>
+            Name: <input type="text" Name="Name" required><br>
+            Address :<textarea Name="Address" required></textarea><br>
+            Contact : <input type="number" Name="Contact" required><br>
+            Gender:
+            <input type="radio" Name="Gender" value="Male"> Male
+            <input type="radio" Name="Gender" value="Female"> Female <br>
+            <button type="submit" Name="Submit">Save </button>
+            <button onclick="window.location.href='PShowData.php'">Show</button>
+            <button onclick="window.location.href='PUpdate.html'">Update</button>
+            <button onclick="window.location.href='PDelete.php'">Delete</button>
+        </form>
+
+    </div>
+    <footer>
+        <div>
+            <p>Developed by: Mr.Rajan Sharma</p>
+            <p>Contact: +977 9819877891</p>
+            <p>Email: studentrajan908@gmail.com</p>
+            <p>Address: Biratnagar, Nepal</p>
+            <p class="a"><img src="rajan.jpg"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
